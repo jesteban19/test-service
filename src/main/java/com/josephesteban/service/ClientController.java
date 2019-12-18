@@ -26,6 +26,11 @@ import com.josephesteban.service.models.ReporteKpi;
 public class ClientController {
 	private List<Client> clientes = new ArrayList<Client>();
 	
+	@GetMapping("/")
+	public String index() {
+		return "Reto Intercorp API REST + Documentacion";
+	}
+	
 	@RequestMapping(value="/creacliente",method=RequestMethod.POST)
 	public Client creacliente(@RequestBody Map<String, ?> input) {
 		Date birthdate = new Date();
